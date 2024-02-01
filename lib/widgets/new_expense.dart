@@ -124,6 +124,7 @@ class _NewExpenseState extends State<NewExpense> {
                 value: _selectedCategory,
                 items: Category.values
                     .map(
+                      // ignore: non_constant_identifier_names
                       (Category) => DropdownMenuItem(
                         value: Category,
                         child: Text(
@@ -140,7 +141,7 @@ class _NewExpenseState extends State<NewExpense> {
                 },
               ),
               const Spacer(),
-              ElevatedButton(
+              TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
